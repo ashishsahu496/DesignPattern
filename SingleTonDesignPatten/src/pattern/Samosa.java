@@ -4,6 +4,9 @@ public class Samosa {
 	
 	static Samosa samosa;
 	private  Samosa() {
+		if(samosa !=null) {
+			throw new RuntimeException("you are trying to break singleton pattern");
+		}
 		
 	};
 	
@@ -21,9 +24,3 @@ public class Samosa {
 
 }
  
-/*
-make private constructor
-make static method
-have synchronized block
-
-*/

@@ -18,11 +18,24 @@ public class Main{
 	
 	// break the singleton 
 	
-	Constructor<Samosa> constructor = Samosa.class.getDeclaredConstructor();
-	constructor.setAccessible(true);
-	Samosa s3=constructor.newInstance();
-	System.out.println(s3.hashCode());
-
+//	Constructor<Samosa> constructor = Samosa.class.getDeclaredConstructor();
+//	constructor.setAccessible(true);
+//	Samosa s3=constructor.newInstance();
+//	System.out.println(s3.hashCode());
+	
+	Kachori k1=Kachori.INSTANCE;
+	Kachori k2=Kachori.INSTANCE;
+	System.out.println(k1.hashCode());
+	System.out.println(k2.hashCode());
+	
 	}
 
 }
+/*
+make private constructor
+make static method
+have synchronized block
+reflectionApi
+use Enum
+
+*/
