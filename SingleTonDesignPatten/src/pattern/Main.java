@@ -1,8 +1,10 @@
 package pattern;
 
-public class Main {
+import java.lang.reflect.Constructor;
 
-	public static void main(String[] args) {
+public class Main{
+
+	public static void main(String[] args) throws Exception{
 		
 		
 	Samosa s1=Samosa.getSamosa();
@@ -13,6 +15,13 @@ public class Main {
 	
 	System.out.println(Jalebi.getJalebi().hashCode());
 	System.out.println(Jalebi.getJalebi().hashCode());
+	
+	// break the singleton 
+	
+	Constructor<Samosa> constructor = Samosa.class.getDeclaredConstructor();
+	constructor.setAccessible(true);
+	Samosa s3=constructor.newInstance();
+	System.out.println(s3.hashCode());
 
 	}
 
