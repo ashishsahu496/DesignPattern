@@ -1,5 +1,9 @@
 package pattern;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.lang.reflect.Constructor;
 
 public class Main{
@@ -28,6 +32,13 @@ public class Main{
 	System.out.println(k1.hashCode());
 	System.out.println(k2.hashCode());
 	
+	Paatis paatis =Paatis.getPaatis();
+	ObjectOutputStream oos= new ObjectOutputStream(new FileOutputStream("abc.ob"));
+	oos.writeObject(paatis);
+	System.out.println("Serialization done...");
+	ObjectInputStream ois=new ObjectInputStream(new FileInputStream("abc.ob"));
+	Paatis p1=(Paatis) ois.readObject();
+	System.out.println(s2.hashCode());
 	}
 
 }
