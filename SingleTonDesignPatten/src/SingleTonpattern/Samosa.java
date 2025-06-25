@@ -1,4 +1,4 @@
-package pattern;
+package SingleTonpattern;
 
 public class Samosa {
 	

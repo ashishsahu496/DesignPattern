@@ -1,4 +1,4 @@
-package pattern;
+package SingleTonpattern;
 
 public enum Kachori {
 	INSTANCE;

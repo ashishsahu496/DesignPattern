@@ -1,4 +1,4 @@
-package pattern;
+package SingleTonpattern;
 
 import java.io.Serializable;
 
